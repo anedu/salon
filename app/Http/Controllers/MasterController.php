@@ -10,14 +10,19 @@ class MasterController extends Controller
     public function show()
     {
     		$masters = Master::with('services')->get();
-    		return view("masters",["results"=>$masters]);
+    		
+
+            $master = Master::find(1);
+            $master->services()->attach(3);
+
+            return view("masters",["results"=>$masters]);
+           // $master->save();
     		
     		/*$services = Master::find($master->id)->services;
     		foreach ($services as $service) {
     			$result = $master->merge($service);
     		}
   
-    		return view("masters",["results"=>$result]);*/
-		
+    		return view("masters",["results"=>$result]);*/		
     }
 }
