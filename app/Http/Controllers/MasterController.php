@@ -12,11 +12,13 @@ class MasterController extends Controller
     		$masters = Master::with('services')->get();
     		
 
+
             $master = Master::find(1);
             $master->services()->attach(3);
 
             return view("masters",["results"=>$masters]);
-           // $master->save();
+
+    		
     		
     		/*$services = Master::find($master->id)->services;
     		foreach ($services as $service) {
