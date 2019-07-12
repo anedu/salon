@@ -11,7 +11,7 @@ class TimesTableSeeder extends Seeder
      */
     public function run()
     {
-    	DB:table('times')->insert([
+        DB::table('times')->insert([
             'time' => '11:00:00',
         ]);
     }

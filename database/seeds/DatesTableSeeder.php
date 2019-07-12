@@ -1,5 +1,5 @@
 <?php
-use App\Date;
+
 use Illuminate\Database\Seeder;
 use Carbon\Carbon;
 
