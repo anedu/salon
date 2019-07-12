@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/masters', 'MasterController@show');
+Route::get('/masters', 'MasterController@dateRange');
